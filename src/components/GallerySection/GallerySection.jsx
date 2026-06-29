@@ -1,61 +1,17 @@
 import React, { useState, useRef } from 'react';
 import ImageGallery from 'react-image-gallery';
+import 'react-image-gallery/styles/image-gallery.css';
 import './GallerySection.css';
 
+const modules = import.meta.glob('../../assets/images/*.jpg', {
+  eager: true,
+  import: 'default',
+});
 
-const images = [
-  {
-  original: 'src/assets/images/1.jpg',
-  thumbnail: 'src/assets/images/1.jpg'
-  },
- {
-  original: 'src/assets/images/2.jpg',
- thumbnail: 'src/assets/images/2.jpg'
- },
- {
- original: 'src/assets/images/3.jpg',
- thumbnail: 'src/assets/images/3.jpg'
- },
- {
- original: 'src/assets/images/4.jpg',
- thumbnail: 'src/assets/images/4.jpg'
- },
- {
- original: 'src/assets/images/5.jpg',
- thumbnail: 'src/assets/images/5.jpg'
- },
- {
- original: 'src/assets/images/6.jpg',
- thumbnail: 'src/assets/images/6.jpg'
- },
- {
- original: 'src/assets/images/7.jpg',
- thumbnail: 'src/assets/images/7.jpg'
- },
- {
- original: 'src/assets/images/8.jpg',
- thumbnail: 'src/assets/images/8.jpg'
-},
- {
- original: 'src/assets/images/9.jpg',
- thumbnail: 'src/assets/images/9.jpg'
-},
- {
- original: 'src/assets/images/10.jpg',
-  thumbnail: 'src/assets/images/10.jpg'
-  },
-{
-  original: 'src/assets/images/11.jpg',
-  thumbnail: 'src/assets/images/11.jpg'
-},
-{
-  original: 'src/assets/images/12.jpg',
-  thumbnail: 'src/assets/images/12.jpg' 
-}
+const images = Object.values(modules).map((src) => ({
+  original: src,
+}));
 
-
-  
-  ];
 
 function GallerySection() {
   const [showModal, setShowModal] = useState(false);
