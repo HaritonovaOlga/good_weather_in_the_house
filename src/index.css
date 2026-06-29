@@ -1,0 +1,110 @@
+@font-face {
+  font-family: 'Roboto-Regular';
+  src: url('./src/assets/fonts/Roboto-Regular.ttf') format('ttf');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Roboto-Bold';
+  src: url('./src/assets/fonts/Roboto-Bold.ttf') format('ttf');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Roboto-Italic';
+  src: url('./src/assets/fonts/Roboto-Italic.ttf') format('ttf');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Roboto-BoldItalic';
+  src: url('./src/assets/fonts/Roboto-BoldItalic.ttf') format('ttf');
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+h1 {
+  font-family: 'Roboto-Bold', Arial, sans-serif;
+  font-weight: 700;
+  text-align: center;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  color: #4a6fa5;
+}
+
+p {
+  font-family: 'Roboto-Regular', Arial, sans-serif;
+  font-weight: 400;
+  text-indent: 30px;
+  line-height: 1.5;
+  text-align: justify;
+  text-justify: inter-word;
+  color: #000000;
+}
+
+.italic-text {
+  font-style: italic;
+}
+
+.title {
+  font-family: 'Roboto-Bold', Arial, sans-serif;
+  font-weight: 700;
+  text-align: center;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  color: #4a6fa5;
+}
+
+.text {
+  font-family: 'Roboto-Regular', Arial, sans-serif;
+  font-weight: 400;
+  text-indent: 30px;
+  line-height: 1.5;
+  text-align: justify;
+  text-justify: inter-word;
+  color: #000000;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  color: #1a1a1a;
+  background-color: #ffffff;
+  line-height: 1.5;
+}
+
+#root > div {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
+}
+
+/* Адаптивная сетка секций */
+main {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 16px;
+}
+
+@media (min-width: 768px) {
+  main {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

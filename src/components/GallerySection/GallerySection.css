@@ -1,0 +1,43 @@
+.gallery-section {
+  padding: 32px 16px;
+}
+
+.section-title {
+  margin-top: 0;
+}
+
+.open-gallery-btn {
+  padding: 12px 24px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #3b82f6;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  max-width: 90vw;
+  max-height: 85vh;
+  width: 100%;
+}
+
+.close-modal-btn {
+  position: absolute;
+  top: 16px; right: 16px;
+  background: none;
+  border: none;
+  font-size: 28px;
+  color: #fff;
+  cursor: pointer;
+}
