@@ -7,10 +7,10 @@ import PhoneButton from './PhoneButton/PhoneButton';
 function MainContent() {
   return (
     <main>
-      <GallerySection />
-      <MapSection />
       <DescriptionSection />
+      <MapSection />
       <PhoneButton phone="+79991234567" />
+      <GallerySection />
     </main>
   );
 }
