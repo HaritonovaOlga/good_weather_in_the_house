@@ -3,8 +3,6 @@ import Header from './components/Header/Header';
 import MainContent from './components/MainContent';
 import Footer from './components/Footer/Footer';
 
-
-// Пример fetch + промисов (демонстрация)
 function loadData() {
   return fetch('https://jsonplaceholder.typicode.com/posts/1')
     .then(res => {
@@ -18,10 +16,9 @@ function loadData() {
 }
 
 function App() {
-  // Можно использовать loadData через useEffect + useState, если нужно показать данные
   return (
     <div>
-      <Header title="Дом и дорога" />
+      <Header title="Дом с запахом сосны" />
       <MainContent />
       <Footer />
     </div>
